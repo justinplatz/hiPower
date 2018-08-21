@@ -13,4 +13,5 @@ Building out a MVP
   - ...
   
 2. Storage
+
 3. Monitor for Delta, create feed
