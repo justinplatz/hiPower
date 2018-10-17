@@ -6,3 +6,6 @@
 
 # Standard Ontologies
 [w3.org Good Ontologies](https://www.w3.org/wiki/Good_Ontologies)
+
+# Graph Technologies
+[About Blazegraph](https://wiki.blazegraph.com/wiki/index.php/About_Blazegraph)
