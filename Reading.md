@@ -12,3 +12,6 @@
 
 # Security
 [Securing User Authentication](https://www.stavros.io/posts/securing-user-authentication/)
+
+# Other
+[Tool for Requesting Your Data from 100+ Sites](https://mydatarequest.com/)
