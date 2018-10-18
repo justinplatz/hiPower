@@ -15,3 +15,4 @@
 
 # Other
 [Tool for Requesting Your Data from 100+ Sites](https://mydatarequest.com/)
+[Delete Your Account Now](https://lareviewofbooks.org/article/delete-your-account-a-conversation-with-jaron-lanier/)
