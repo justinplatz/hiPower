@@ -6,9 +6,11 @@ Building out a MVP
   - FB
   - Insta
   - Google
-    - Cal
+    - Search
     - Photos
     - Maps
+    - Chrome
+    - Cal
     - ...
   - ...
   
