@@ -1,0 +1,37 @@
+<dom-module id="hipo-top-nav">
+  <template>
+    <style>
+      :host {
+        
+      }
+      .outer{
+        display: block;
+        top: 8px;
+        width: calc(100vw - 16px);
+        height: 7vh;
+        border-bottom: 2px solid #80808040;
+      }
+
+      img.logo{
+        height: calc(7vh - 8px);
+        margin-left: 4px;
+      }
+    </style>
+    <div class="outer">
+      <img src="../../img/hipo.png" class="logo">
+    </div>
+  </template>
+
+  <script>
+    class HipoTopNav extends Polymer.Element {
+      static get is() { return 'hipo-top-nav'; }
+      static get properties() {
+        return {
+          
+        };
+      }
+    }
+
+    window.customElements.define(HipoTopNav.is, HipoTopNav);
+  </script>
+</dom-module>

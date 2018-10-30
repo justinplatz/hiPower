@@ -1,0 +1,36 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="hipo-ui-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      vaadin-upload.upload{
+        margin-top: 8px;
+      }
+    </style>
+
+    <hipo-top-nav></hipo-top-nav>
+
+    <vaadin-upload class="upload"></vaadin-upload>
+
+  </template>
+
+  <script>
+    class HipoUI extends Polymer.Element {
+      static get is() { return 'hipo-ui-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'hipo-ui-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(HipoUI.is, HipoUI);
+  </script>
+</dom-module>

@@ -1,0 +1,6 @@
+{
+  "name": "hipo-ui",
+  "short_name": "hipo-ui",
+  "start_url": "/",
+  "display": "standalone"
+}

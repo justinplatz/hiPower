@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>hipo-ui-app test</title>
+
+    <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../../src/hipo-ui-app/hipo-ui-app.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <hipo-ui-app></hipo-ui-app>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('hipo-ui-app', function() {
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'hipo-ui-app');
+        });
+      });
+    </script>
+  </body>
+</html>
