@@ -8,9 +8,26 @@
         display: block;
         top: 8px;
         width: calc(100vw - 16px);
-        height: 7vh;
         border-bottom: 2px solid #80808040;
         text-align: center;
+      }
+
+      .lower{
+        margin-top: 2.5vh;
+        margin-bottom: 2.5vh;
+      }
+
+      paper-button.navbutton{
+        text-transform: capitalize;
+        font-family: Helvetica;
+        border: 1px solid black;
+        border-radius: 0;
+        font-weight: BOLD;
+        font-size: .75em;
+      }
+
+      paper-button.navbutton:hover{
+        background: #eeeeee;
       }
 
       img.logo{
@@ -23,7 +40,8 @@
         <img src="../../img/hipo.png" class="logo">
       </div>
       <div class="lower">
-        <paper-button>TEST</paper-button>
+        <paper-button class="navbutton" on-tap="_setPage" value="home">Home</paper-button>
+        <paper-button class="navbutton" on-tap="_setPage" value="upload">Upload</paper-button>
       </div>
     </div>
   </template>
@@ -31,11 +49,26 @@
   <script>
     class HipoTopNav extends Polymer.Element {
       static get is() { return 'hipo-top-nav'; }
+      
       static get properties() {
         return {
-          
+          page: {
+            type: String,
+            notify:true,
+            observer: '_pageChanged',
+          }
         };
       }
+
+      _setPage(event){
+        var value = event.target.getAttribute("value");
+        this.set("page",value);
+      }
+
+      _pageChanged(){
+        //console.log(this.page);
+      }
+
     }
 
     window.customElements.define(HipoTopNav.is, HipoTopNav);

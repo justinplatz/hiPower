@@ -1,4 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 
 <dom-module id="hipo-ui-app">
   <template>
@@ -12,23 +15,52 @@
       }
     </style>
 
-    <hipo-top-nav></hipo-top-nav>
+    <hipo-top-nav
+    page={{page}}>
+    </hipo-top-nav>
 
-    <vaadin-upload class="upload"></vaadin-upload>
+      <template is="dom-if" if="[[_isUpload(page)]]">
+        <hipo-page-upload></hipo-page-upload>
+      </template>
+      
+      <template is="dom-if" if="[[_isHome(page)]]">
+        Home
+      </template>
 
   </template>
 
   <script>
     class HipoUI extends Polymer.Element {
+
       static get is() { return 'hipo-ui-app'; }
+
       static get properties() {
         return {
-          prop1: {
-            type: String,
-            value: 'hipo-ui-app'
+          page: {
+            type    : String,
+            notify  : true,
+            observer: '_pageChanged',
+            value   : 'upload'
           }
         };
       }
+
+      ready() {
+        super.ready();
+      }
+
+      _isUpload(page){
+        return (this.page == 'upload');
+      }
+
+      _isHome(page){
+        return (this.page == 'home');
+      }
+
+      _pageChanged(){
+        console.log(this.page);
+      }
+
     }
 
     window.customElements.define(HipoUI.is, HipoUI);

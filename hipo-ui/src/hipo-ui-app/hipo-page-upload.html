@@ -1,0 +1,61 @@
+<dom-module id="hipo-page-upload">
+  <template>
+    <style>
+      :host {
+        
+      }
+
+      vaadin-upload.upload{
+        top: 5vh;
+        width: 75vw;
+        left: 12.5vw;
+      }
+      
+      iron-icon.uploadicon{
+      }
+
+    </style>
+
+    <vaadin-upload 
+    class="upload">
+
+      <iron-icon 
+      slot="drop-label-icon" 
+      icon="cloud-upload"
+      class="uploadicon">
+      </iron-icon>
+
+      <span slot="drop-label">
+        Drop your data download directories (JSON files only)
+      </span>
+    </vaadin-upload>
+    
+
+   
+    
+  </template>
+
+  <script>
+    class HipoPageUpload extends Polymer.Element {
+      static get is() { return 'hipo-page-upload'; }
+      
+      static get properties() {
+        return {
+          
+        };
+      }
+
+      _igcollapse(){
+        this.$.igcollape.toggle();
+      }
+
+      _fbcollapse(){
+        this.$.fbcollape.toggle();
+      }
+    
+
+    }
+
+    window.customElements.define(HipoPageUpload.is, HipoPageUpload);
+  </script>
+</dom-module>
